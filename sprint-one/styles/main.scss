@@ -21,158 +21,204 @@ html{
     color: #FFFFFF;
     font-size: 1.5rem;
     padding-top: 1.5rem;
+    
+    &__nav{
+    text-align: center;
+    }
+    &__title{
+    background-color: #323232;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    }
+    &__link{
+    text-decoration: none;
+    color: #E1E1E1;
+    display: block;
+    
+    @include tablet{
+        height: 4rem;
+        }
+    @include desktop{
+        height: 4rem;
+        }
+    
+    &:active{
+    color: #FFFFFF;
+    border-bottom: 0.5rem solid #FFFFFF;
+    font-weight: bold;
+    }
+    &:hover{
+    color: #FFFFFF;
+    transform: scale(1.5)
+    }
+    &-active{
+    border-bottom: 0.2rem solid #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+    }
+    }
+    &__list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+        
+    @include tablet{
+        width: 40vw;
+        }
+    }
  
     @include tablet{
         display: flex;
         align-items: center;
         padding: 2rem;
+        height: 15vh;
+        padding-top: 5rem;
     }
 }
 
-.header__nav{
-    width: 78%;
-    text-align: center;
-}
-
-.header__title{
-    background-color: #323232;
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.header__list{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    
-    @include tablet{
-    width: 40vw;
-    }
-}
-
-.header__link{
+.logomark__link-style{
     text-decoration: none;
-    color: #E1E1E1;
-
-    &:active{
-        color: #FFFFFF;
-        border-bottom: 0.5rem solid #FFFFFF;
-        font-weight: bold;
-    }
-    &:hover{
-        color: #FFFFFF
-    }
-    &-active{
-        border-bottom: 0.5rem solid #FFFFFF;
-        font-weight: bold;
-        color: #FFFFFF;
-    }
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.hero__image{
+.hero{
+    &__section{
+    position: relative; 
+    }
+    &__image{
     background: center no-repeat cover;
     width: 100%;
     position: relative;
-}
+    }
 
-.hero__title{
+    &__title{
     font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
+    font-weight: 700 bold;
     color: #FFFFFF;
-    z-index: 2;
-    top: 15rem;
-}
-
-.hero__opacity {
     position: absolute;
     top: 0;
-    left: 0px;
-    right: 0px;
-    margin-right: 7rem;
-    margin-top: 6.9rem;
-    width: 100%;
-    height: 70%;
-    background-color: #323232;
-    opacity: 50%;
+    margin: 2rem;
+    margin-top: 7rem;
 
     @include tablet{
-        height: 134vh;
+        font-size: 3.75rem;
+    }
+
+    @include desktop{
+        font-size: 3.75rem;
+    }
+    }
+
+    &__opacity {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #323232;
+    opacity: 50%;
     }
 }
-.about__title{
+.about{
+    &__title{
     font-size: 1.5rem;
     font-weight: bold 700;
     padding: 1.5rem 0;
+    width: 90%;
+    margin: 0 auto;
+    
     @include tablet{
         font-size: 2.25rem;
         width: 90%;
         margin: 0 auto
     }
-}
-.about__image{
+    }
+    &__image{
     width: 100%;
-}
-.about__section{
+    }
+    &__section{
     width: 90%;
     margin: 0 auto;
     @include tablet{
         width: 70%;
         margin: 0 auto;
     }
+    }
 }
-
 .teddy__quote{
-    font-weight: 700 bold;
+    font-weight: bold;
     font-size: 0.875rem;
     line-height: 1.375rem;
     @include tablet{
         font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+    @include desktop{
+        width: 60%;
+        margin: 3rem 0;
     }
 }
 
-.bees__header{
+.bees{
+    &__title-header{
     margin: 1rem 0
-}
-.bees__content-wrapper{
-    padding-bottom: 1.5rem;
-    width: 100%;
-}
-
-.bees__content{
+    }
+    &__content-wrapper{
     @include tablet{
-            width: 45%;
-            display: inline-block;
-            font-size: 1.2rem;
-            line-height: 1.3rem;
-            margin-right: 2rem;
-        }
-}
+        padding-bottom: 1.5rem;
+        width: 100%;
+        display: flex;
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+    }
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.375rem;    
+    }
+    }
 
-.bees__content2{
+    &__content{
+    margin-bottom: 2rem;
+    @include tablet{
+        width: 45%;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        margin-right: 2rem;
+        }
+    @include desktop{
+        width: 50%;
+    }
+    }
+    &__content2{
     @include tablet{
         width: 45%;
         display: inline-block;
         font-size: 1.2rem;
         line-height: 1.3rem;
         }
+    @include desktop{
+        width: 50%;
+        height: 10vh
+        }
     }
+}
 .gallery{
     font-size: 1.5rem;
     font-weight: bold 700;
     padding: 1.5rem 0;
     background-color: #FAFAFA;
     padding-top: 1rem;
-}
-.gallery__header{
+
+    &__header{
     @include tablet{
         width: 90%;
         margin: 0 auto;
         padding: 2rem;
     }
-}
-.gallery__section-container{
+    }
+    &__section-container{
     @include tablet{
         width: 90%;
         margin: 0 auto;
@@ -182,12 +228,16 @@ html{
         justify-content: space-evenly;
         }
     }
-
-
-.gallery__image{
+    &__image{
     width: 100%;
+    filter: grayscale(100%);
+
+    &:hover{
+    filter: none
+    }
     @include tablet{
         margin-bottom: 1.5rem;
+    }
     }
 }
 .image__container{
@@ -200,60 +250,78 @@ html{
     background-color: #323232;
     color: #FFFFFF;
     font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.125;
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
     @include tablet{
         display: flex;
         position: relative;
     }
-}
-
-.footer__content-contact{
+    &__content-contact{
     @include tablet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    margin-top: 2rem;
-}
-}
-.footer__band-name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin-top: 2rem;
+    }
+    }
+    &__band-name{
     @include tablet{
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 3rem;
-}
-}
-.footer__icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 3rem;
+    }
+    }
+    &__icon{
     margin-right: 1rem;
-}
-.footer__content{
+    }
+    &__content{
     width: 90%;
     margin: 0 auto;
+    }
+    &__link{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 }
 
 .contact__message, .footer__icon, .contact__adams, .contact__pearl, .contact__carson, .copyright__message{
-    padding: 1rem 0
+    padding: 1rem 0;
 }
 
-.contact__adams, .contact__pearl, .contact__carson{
+.contact{
+    &__container{
     @include tablet{
-        width: 50vw;
+        display: flex;
     }
-}
-.contact__container{
-    @include tablet{
-    display: flex;
     }
-}
-
-
-.contact__address{
+    &__address{
     @include tablet{
         margin: 2rem 0;
         display: block;
     }
-}
-.contact__pearl, .contact__adams, .contact__carson{
+    }
+    &__pearl{
     margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__adams{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__carson{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
 }
-
