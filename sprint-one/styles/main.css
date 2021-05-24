@@ -305,6 +305,9 @@ html {
     margin-top: 2rem;
   }
 }
+.footer__band-name {
+  margin-top: 3rem;
+}
 @media (min-width: 768px) {
   .footer__band-name {
     position: absolute;
@@ -333,6 +336,10 @@ html {
   .contact__container {
     display: flex;
   }
+}
+.contact__address {
+  margin: 2rem 0;
+  display: block;
 }
 @media (min-width: 768px) {
   .contact__address {

@@ -270,6 +270,7 @@ html{
     }
     }
     &__band-name{
+    margin-top: 3rem;
     @include tablet{
         position: absolute;
         right: 0;
@@ -301,6 +302,8 @@ html{
     }
     }
     &__address{
+    margin: 2rem 0;
+    display: block;
     @include tablet{
         margin: 2rem 0;
         display: block;
