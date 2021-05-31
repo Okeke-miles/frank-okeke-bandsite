@@ -19,8 +19,8 @@ html{
     width: 100%;
     background-color: $bandsite-black;
     color: $white;
-    font-size: 1.5rem;
-    padding-top: 1.5rem;
+    font-size: $font-size;
+    padding-top: $padding;
    
     &__nav{
     text-align: center;
@@ -89,9 +89,7 @@ html{
     margin-bottom: 2rem;
     }
 }
-.background__image {
-   
-}
+
 .hero{
     &__section{
     position: relative; 
@@ -102,7 +100,7 @@ html{
     }
 
    &__title{
-    font-size: 1.5rem;
+    font-size: $font-size;
     font-weight: 700 bold;
     color: $white;
     position: absolute;
@@ -130,7 +128,7 @@ html{
 }
 .about{
     &__title{
-    font-size: 1.5rem;
+    font-size: $font-size;
     font-weight: bold 700;
     padding: 1.5rem 0;
     width: 90%;
@@ -174,7 +172,7 @@ html{
     }
     &__content-wrapper{
     @include tablet{
-        padding-bottom: 1.5rem;
+        padding-bottom: $padding;
         width: 100%;
         display: flex;
         font-size: 0.813rem;
@@ -212,7 +210,7 @@ html{
     }
 }
 .gallery{
-    font-size: 1.5rem;
+    font-size: $font-size;
     font-weight: bold 700;
     padding: 2rem 0;
     background-color: $alabaster;
@@ -244,13 +242,188 @@ html{
     filter: none
     }
     @include tablet{
-        margin-bottom: 1.5rem;
+        margin-bottom: $margin;
     }
     }
 }
 .image__container{
     @include tablet{
         width: 30%;
+    }
+}
+.avatar__style{
+    height: 2rem;
+    border-radius: 50%;
+    width: 2.2rem;
+    position: absolute;
+    margin-right: -5rem;
+    margin-top: 2rem;
+
+    @include tablet{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: $margin * 2;
+    }
+    @include desktop{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 4rem;
+    }
+
+}
+
+.label{
+    margin: 0.25;
+    display: block;
+    margin-left: 4rem;
+    font-weight: 700;
+    color: $mercury;
+
+    @include tablet{
+        margin-left: 7.5rem
+    }
+    @include desktop{
+        margin-left: 8.5rem
+    }
+}
+#name, #comment{
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    color: $bandsite-black;
+    font-weight: 700;
+    padding: 0.75rem;
+    display: block;
+    margin: 2rem 0;
+    margin-left: 4rem;
+    height:2.25rem;
+    width: 70vw;
+    @include tablet{
+        height:3rem;
+        padding: 1rem;
+        width: 80%;
+        margin-left: 7.5rem;
+    }
+    @include desktop{
+        margin-left: 8.5rem;
+        width: 70%;
+    }
+    
+    :active{
+        border-color: $bandsite-black
+    }
+    :focus{
+        border-color: $bandsite-black;
+    }
+    :invalid{
+        border-color: $error
+    }
+    :required{
+        border-color: $error
+    }
+
+    @include desktop{
+        width: 80%
+    }
+}
+
+#comment{
+    height: 20vh;
+}
+
+.comments{
+    &__section{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    }
+    &__title{
+    margin: 2rem 0;
+    font-size: $font-size * 2;
+    }
+}
+#comment__button{
+    color: $white;
+    background-color: $bandsite-black;
+    width: 100%;
+    height: 3rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    @include tablet{
+        width: 20%;
+        margin: 0 0 2rem 30rem;
+    }
+    @include desktop{
+        width: 20%;
+        margin: 0 0rem 2rem 35rem;
+        
+    }
+}
+
+.comment{
+    border-top: 1px solid $mercury;
+    margin: 2rem 0;
+   
+    @include tablet{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: $margin + 0.5rem;
+        padding-top: $padding + 0.5rem;
+    }
+    @include desktop{
+        width: 50%;
+        margin: 0 auto;
+        margin-top: $margin + 0.5rem;
+        padding-top: $padding + 0.5rem;
+    }
+}
+
+.comment:last-child{
+    margin-bottom: $margin + 0.5rem;
+    padding-bottom: $padding + 0.5rem;
+    border-bottom: 2px solid $mercury;
+}
+.comment__form{
+   @include tablet{
+       width: 85%;
+       margin: 0 auto;
+   }
+    @include desktop{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.card{
+    &__date{
+    display: inline;
+    color: $mercury;
+    font-weight: 700;
+    }
+    &__photo{
+    height: 4vh;
+    width: 2vw;
+    border-radius: 50%;
+    margin-top: 1rem;
+    background-color: $mercury;
+    }
+
+    &__name{
+    display: inline-block;
+    width: 30%;
+    margin-right: $margin * 2;
+    margin-left: $margin + 0.5rem;
+
+    @include tablet{
+        width: 50%;
+    }
+    @include desktop{
+    width: 60%
+    }
+    }
+    &__text{
+    margin-left: 4rem;
+    font-weight: 400;
     }
 }
 
@@ -274,16 +447,16 @@ html{
         justify-content: space-between;
         align-items: center;
         width: 30%;
-        margin-top: 2rem;
+        margin-top: $margin + 0.5rem;
     }
     }
     &__band-name{
-    margin-top: 3rem;
+    margin-top: $margin * 2;
     @include tablet{
         position: absolute;
         right: 0;
         top: 0;
-        margin: 3rem;
+        margin: $margin * 2;
     }
     }
     &__icon{

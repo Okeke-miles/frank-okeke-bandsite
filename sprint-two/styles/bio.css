@@ -276,6 +276,200 @@ html {
   }
 }
 
+.avatar__style {
+  height: 2rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  position: absolute;
+  margin-right: -5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .avatar__style {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .avatar__style {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 4rem;
+  }
+}
+
+.label {
+  margin: 0.25;
+  display: block;
+  margin-left: 4rem;
+  font-weight: 700;
+  color: #E1E1E1;
+}
+@media (min-width: 768px) {
+  .label {
+    margin-left: 7.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .label {
+    margin-left: 8.5rem;
+  }
+}
+
+#name, #comment {
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  color: #323232;
+  font-weight: 700;
+  padding: 0.75rem;
+  display: block;
+  margin: 2rem 0;
+  margin-left: 4rem;
+  height: 2.25rem;
+  width: 70vw;
+}
+@media (min-width: 768px) {
+  #name, #comment {
+    height: 3rem;
+    padding: 1rem;
+    width: 80%;
+    margin-left: 7.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  #name, #comment {
+    margin-left: 8.5rem;
+    width: 70%;
+  }
+}
+#name :active, #comment :active {
+  border-color: #323232;
+}
+#name :focus, #comment :focus {
+  border-color: #323232;
+}
+#name :invalid, #comment :invalid {
+  border-color: #D22D2D;
+}
+#name :required, #comment :required {
+  border-color: #D22D2D;
+}
+@media (min-width: 1280px) {
+  #name, #comment {
+    width: 80%;
+  }
+}
+
+#comment {
+  height: 20vh;
+}
+
+.comments__section {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.comments__title {
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+#comment__button {
+  color: #FFFFFF;
+  background-color: #323232;
+  width: 100%;
+  height: 3rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  #comment__button {
+    width: 20%;
+    margin: 0 0 2rem 30rem;
+  }
+}
+@media (min-width: 1280px) {
+  #comment__button {
+    width: 20%;
+    margin: 0 0rem 2rem 35rem;
+  }
+}
+
+.comment {
+  border-top: 1px solid #E1E1E1;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .comment {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.comment:last-child {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+@media (min-width: 768px) {
+  .comment__form {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1280px) {
+  .comment__form {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.card__date {
+  display: inline;
+  color: #E1E1E1;
+  font-weight: 700;
+}
+.card__photo {
+  height: 4vh;
+  width: 2vw;
+  border-radius: 50%;
+  margin-top: 1rem;
+  background-color: #E1E1E1;
+}
+.card__name {
+  display: inline-block;
+  width: 30%;
+  margin-right: 3rem;
+  margin-left: 2rem;
+}
+@media (min-width: 768px) {
+  .card__name {
+    width: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  .card__name {
+    width: 60%;
+  }
+}
+.card__text {
+  margin-left: 4rem;
+  font-weight: 400;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;
