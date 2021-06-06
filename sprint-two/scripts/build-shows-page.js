@@ -38,10 +38,15 @@
     venue_style.classList.add("venue__header-style")
     location_style.classList.add("location__header-style")
 
-    //APPENDING MY PTAGS TO MY ELEMENTS
-    shows__header.appendChild(date_style)
-    shows__header.appendChild(venue_style)
-    shows__header.appendChild(location_style)
+     //USE THIS FUNCTION TO APPEND ELEMENTS TO HEADER
+     function appendToBody (element) {
+        shows__header.appendChild(element)
+    }
+
+    //APPENDING MY PTAGS TO THE BODY
+    appendToBody(date_style)
+    appendToBody(venue_style)
+    appendToBody(location_style)
 
     //USE THIS FUNCTION TO CREATE ELEMENTS
     function createEl(el, className){
@@ -50,6 +55,8 @@
         
         return element;
     }
+
+   
 
    //USING A FOR LOOP TO ITERATE THROUGH MY ARRAY
     for(let i=0; i<shows.length; i++){
@@ -112,6 +119,18 @@
         }
       
     }
+
+    //API
+    const BASE_URL = "https://project-1-api.herokuapp.com/"
+
+    axios
+     .get(`${BASE_URL}register`)
+     .then(result => console.log(result))
+     .catch(error => console.log(error))
+
+     //RETRIEVED MY API KEY
+     const API_KEY = "98d92a84-2edb-4951-a936-7032178dca18"
+
 
     
     

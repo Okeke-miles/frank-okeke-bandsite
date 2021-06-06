@@ -1,0 +1,185 @@
+@use "./Partials/mixins" as *;
+@use "./Partials/typography" as *;
+@use "./Partials/colors" as *;
+@use "./Partials/variables" as *;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: "Avenir";
+    background-color: $white;
+}
+.header{
+    width: 100%;
+    background-color: $bandsite-black;
+    color: $white;
+    font-size: $font-size;
+    padding-top: $padding;
+   
+    &__nav{
+    text-align: center;
+    }
+    &__title{
+    background-color: $bandsite-black;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    }
+    &__link{
+    text-decoration: none;
+    color: $mercury;
+    display: block;
+    padding-bottom: 1rem;
+   
+    
+    @include tablet{
+        height: 3rem;
+        padding-bottom: 3.8rem;
+        }
+    @include desktop{
+        height: 3rem;
+        padding-bottom: 3.8rem;
+        }
+    
+    &:active{
+    color: $white;
+    border-bottom: 0.5rem solid #FFFFFF;
+    font-weight: bold;
+    }
+    &:hover{
+    color: $white;
+    transform: scale(1.5)
+    }
+    &-active{
+    border-bottom: 0.2rem solid $white;
+    font-weight: bold;
+    color: $white;
+    }
+    }
+    &__list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+        
+    @include tablet{
+        width: 40vw;
+        }
+    }
+ 
+    @include tablet{
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        height: 15vh;
+        padding-top: 5rem;
+    }
+}
+
+.logomark__link-style{
+    text-decoration: none;
+    color: $white;
+    display: block;
+    @include tablet{
+    margin-bottom: 2rem;
+    }
+}
+
+.footer{
+    background-color: $bandsite-black;
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.125;
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    @include tablet{
+        display: flex;
+        position: relative;
+    }
+    &__content-contact{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin-top: $margin + 0.5rem;
+    }
+    }
+    &__band-name{
+    margin-top: $margin * 2;
+    @include tablet{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: $margin * 2;
+    }
+    }
+    &__icon{
+    margin-right: 1rem;
+    }
+    &__content{
+    width: 90%;
+    margin: 0 auto;
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.contact__message, .footer__icon, .contact__adams, .contact__pearl, .contact__carson, .copyright__message{
+    padding: 1rem 0;
+}
+
+.contact{
+    &__container{
+    @include tablet{
+        display: flex;
+    }
+    }
+    &__address{
+    margin: 2rem 0;
+    display: block;
+    @include tablet{
+        margin: 2rem 0;
+        display: block;
+    }
+    }
+    &__pearl{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__adams{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__carson{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+}
+
+.comment__form{
+   @include tablet{
+       width: 80%;
+       margin: 0 auto;
+   }
+    @include desktop{
+        width: 40%;
+        margin: 0 auto;
+    }
+}

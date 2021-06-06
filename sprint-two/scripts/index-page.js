@@ -1,3 +1,6 @@
+   
+
+
 //SET TIME VARIABLE TO DISPLAY DATE
 let time = new Date
 
@@ -30,6 +33,7 @@ function createCard(comment){
     let heading = createEl('h4','card__name');
     
     heading.innerText = comment.name;
+    console.log(heading)
    
     article.appendChild(heading);
 
@@ -46,6 +50,16 @@ function createCard(comment){
     }
 
 //AFFIXING COMMENTS TO THE BROWSER
+function displayComment(name){
+    let myComments=document.querySelector('.comment__container');
+    myComments.innerHTML=""
+    for(let i=0; i<comments.length; i++){
+        let card = createCard(comments[i])
+        myComments.prepend(card)
+    }
+}
+
+//TEST
 function displayComment(name){
     let myComments=document.querySelector('.comment__container');
     myComments.innerHTML=""
@@ -77,3 +91,22 @@ function buttonSubmit(event) {
     
     form.addEventListener('submit', buttonSubmit);
     displayComment();
+
+    // //API
+    const BASE_URL = "https://project-1-api.herokuapp.com/"
+
+     //RETRIEVED MY API KEY
+
+     const API_KEY = "98d92a84-2edb-4951-a936-7032178dca18"
+
+     axios.get(`${BASE_URL}comments?api_key=${API_KEY}`)
+
+     .then(result => 
+        {console.log(result.data)
+        let commentAPI = document.createElement(`div`);
+        commentAPI = result.data
+    console.log(commentAPI)})
+     .catch(error => console.log(error))
+
+
+    

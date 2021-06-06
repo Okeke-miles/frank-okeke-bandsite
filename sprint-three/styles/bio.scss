@@ -36,14 +36,15 @@ html{
     color: $mercury;
     display: block;
     padding-bottom: 1rem;
+    height: 5rem;
    
     
     @include tablet{
-        height: 3rem;
+        height: 4rem;
         padding-bottom: 3.8rem;
         }
     @include desktop{
-        height: 3rem;
+        height: 4rem;
         padding-bottom: 3.8rem;
         }
     
@@ -51,6 +52,7 @@ html{
     color: $white;
     border-bottom: 0.5rem solid #FFFFFF;
     font-weight: bold;
+    height: 5rem;
     }
     &:hover{
     color: $white;
@@ -79,6 +81,10 @@ html{
         height: 15vh;
         padding-top: 5rem;
     }
+
+    &__logo{
+        height: 4vh;
+    }
 }
 
 .logomark__link-style{
@@ -96,7 +102,7 @@ html{
     background: url(/assets/images/hero-bio.jpg) center no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: 100vh;
+    height: 120vh;
     }
 
    &__title{
@@ -106,14 +112,14 @@ html{
     position: absolute;
     top: 0;
     margin: 2rem;
-    margin-top: 7rem;
+    margin-top: 20rem;
 
     @include tablet{
-        font-size: 3.75rem;
+        font-size: 5.75rem;
     }
 
     @include desktop{
-        font-size: 3.75rem;
+        font-size: 5.75rem;
     }
     }
 
@@ -296,16 +302,16 @@ html{
     margin: 2rem 0;
     margin-left: 4rem;
     height:2.25rem;
-    width: 70vw;
+    width: 25rem;
     @include tablet{
         height:3rem;
         padding: 1rem;
-        width: 80%;
+        width: 30rem;
         margin-left: 7.5rem;
     }
     @include desktop{
         margin-left: 8.5rem;
-        width: 70%;
+        width: 30rem;
     }
     
     :active{
@@ -322,12 +328,21 @@ html{
     }
 
     @include desktop{
-        width: 80%
+        width: 30rem;
     }
 }
 
 #comment{
-    height: 20vh;
+    width: 25rem;
+    height: 10rem;
+    
+    @include tablet{
+        width: 30rem;
+    }
+
+    @include desktop{
+        width: 30rem;
+    }
 }
 
 .comments{
@@ -337,26 +352,38 @@ html{
     position: relative;
     }
     &__title{
+    font-size: $font-size;
+    margin: 2rem 0;
+
+    @include tablet{
     margin: 2rem 0;
     font-size: $font-size * 2;
+    }
+    @include desktop{
+    margin: 2rem 0;
+    font-size: $font-size * 2;
+        }
     }
 }
 #comment__button{
     color: $white;
     background-color: $bandsite-black;
-    width: 100%;
+    width: 30rem;
     height: 3rem;
     font-weight: 700;
     border-radius: 0.5rem;
     cursor:pointer;
+
+    &:hover{
+        background-color: $bandsite-darkblack;
+    }
     @include tablet{
-        width: 20%;
-        margin: 0 0 2rem 30rem;
+        width: 10rem;
+        margin: 0 0 2rem 25rem;
     }
     @include desktop{
-        width: 20%;
-        margin: 0 0rem 2rem 35rem;
-        
+        width: 10rem;
+        margin: 0 0rem 2rem 30rem; 
     }
 }
 
@@ -365,33 +392,35 @@ html{
     margin: 2rem 0;
    
     @include tablet{
-        width: 70%;
-        margin: 0 auto;
+        width: 40rem;
+        
         margin-top: $margin + 0.5rem;
         padding-top: $padding + 0.5rem;
     }
     @include desktop{
-        width: 50%;
-        margin: 0 auto;
+        width: 40rem;
         margin-top: $margin + 0.5rem;
         padding-top: $padding + 0.5rem;
     }
+
+    &__container{
+        width: 30rem;
+        @include tablet{
+        width:60%;
+        margin: 0 auto;
+        }
+        @include desktop{
+        width:30%;
+        margin: 0 auto;
+    }
 }
+
+
 
 .comment:last-child{
     margin-bottom: $margin + 0.5rem;
     padding-bottom: $padding + 0.5rem;
     border-bottom: 2px solid $mercury;
-}
-.comment__form{
-   @include tablet{
-       width: 85%;
-       margin: 0 auto;
-   }
-    @include desktop{
-        width: 60%;
-        margin: 0 auto;
-    }
 }
 
 .card{
@@ -410,9 +439,9 @@ html{
 
     &__name{
     display: inline-block;
-    width: 30%;
     margin-right: $margin * 2;
     margin-left: $margin + 0.5rem;
+    width: 10rem;
 
     @include tablet{
         width: 50%;
@@ -426,6 +455,17 @@ html{
     font-weight: 400;
     }
 }
+
+.comment__form{
+    @include tablet{
+        width: 80%;
+        margin: 0 auto;
+    }
+     @include desktop{
+         width: 40%;
+         margin: 0 auto;
+     }
+ }
 
 .footer{
     background-color: $bandsite-black;
@@ -508,4 +548,5 @@ html{
         width: 50vw;
     }  
     }
+}
 }
